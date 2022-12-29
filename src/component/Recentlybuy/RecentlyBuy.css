@@ -1,0 +1,10 @@
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn{
+    background-color: aqua;
+}

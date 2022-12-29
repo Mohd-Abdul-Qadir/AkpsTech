@@ -1,0 +1,31 @@
+.mian-nav{
+     
+    background-color: rgb(210, 173, 173);
+    
+  
+  }
+  .logo{
+   margin: 25px;
+   padding: 10px;
+   
+  }
+.middle {
+    
+   justify-content: center;
+   flex-direction: row;
+   display: flex;
+   font-size: x-large;
+   margin-top: -54px;
+   
+   
+} 
+.right{
+    justify-content: right;
+    flex-direction: row;
+    display: flex;
+} 
+.hero-section{
+    justify-content: center;
+    display: grid;
+    font-size: xx-large;
+}
