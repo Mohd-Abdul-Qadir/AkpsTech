@@ -15,9 +15,6 @@ function App() {
         <Route path='/singup' element={<Singup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/contact' element={<Contact/>}/>
-
-        
-    
       </Routes>
     </BrowserRouter>
     
