@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,37 +13,58 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-function Copyright(props) {
 
-  const Navigate = useNavigate();
-  const goto =()=>{
-    Navigate('/')
-  }
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  const nevigate = useNavigate();
+
+  const [user, setUser]= useState({
+    name:"",email:"",phone:"",password:"" , cpassword:""
+});
+
+let name,value;
+const handleInput =(e)=>{
+  name =e.target.name
+  value =e.target.value
+  setUser({...user, [name]:value})
+  
+
+}
+
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+        const {name, email, phone, work, password, cpassword} = user;
+        const res = await fetch('/api/register',{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name, email, phone, work, password, cpassword
+
+            })
+        });
+        const data =await res.json();
+        if(!data.isSuccess){
+            window.alert("INvallid Registration")
+            console.log("INvallid Registration")
+            
+        }else{
+            // window.alert("sucsussful Registration")
+            toast("sucsusfull")
+            nevigate('/')
+
+
+        }
+    
+    }
 
   return (
     <ThemeProvider theme={theme}>
@@ -68,13 +89,15 @@ export default function SignUp() {
               <Grid item xs={12} >
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="Name"
+                  label="Name"
                   autoFocus
-                />
+                  value={user.name}
+    
+    onChange={handleInput}            />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -84,7 +107,9 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
-                />
+                  value={user.email}
+   
+   onChange={handleInput}             />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -94,7 +119,10 @@ export default function SignUp() {
                   label="phone"
                   name="phone"
                   autoComplete="phone"
-                />
+                  value={user.phone}
+
+  
+  onChange={handleInput}              />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -105,17 +133,23 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={user.password}
+
+onChange={handleInput}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  name="password"
+                  name="cpassword"
                   label="conform password"
                   type="password"
-                  id="password"
+                  id="cpassword"
                   autoComplete="new-password"
+                  value={user.cpassword}
+                  onChange={handleInput}
+
                 />
               </Grid>
             </Grid>
@@ -127,6 +161,8 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
+            <ToastContainer />
+
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="/login" variant="body2">
