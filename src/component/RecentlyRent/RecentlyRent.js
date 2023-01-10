@@ -8,15 +8,15 @@ import img4 from "../imeges/img4.jpg";
 import img5 from "../imeges/img5.jpg";
 import img6 from "../imeges/img6.jpg";
 import img7 from "../imeges/img7.jpg";
-import './RecentlyBuy.css'
+import './RecentlyRent.css'
 
 
-const RecentlyBuy = () => {
+const RecentlyRent = () => {
   return (
     <> 
     <div className="head">
 
-    <h3 >Recently Added for Buy</h3>
+    <h3 >Recently Added for Rent</h3>
     <p>Based on preferences of users like you</p>
     </div>
     
@@ -122,4 +122,4 @@ const RecentlyBuy = () => {
   );
 };
 
-export default RecentlyBuy;
+export default RecentlyRent;
