@@ -1,13 +1,17 @@
 import React from 'react'
+import AddProduct from './component/addproduct/AddressForm'
 import Singup from './component/singup/Singup'
 import Login from './component/login/Login'
 import Contact from './component/contactus/ContactUs';
 import Navbar from './component/navbar/Navbar'
 import RecentlyBuy from './component/Recentlybuy/RecentlyBuy'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Checkout from './component/addproduct/Checkout';
 function App() {
   return(
     <>
+    {/* <AddProduct/> */}
+
     <BrowserRouter>
       <Routes>
 
@@ -15,6 +19,8 @@ function App() {
         <Route path='/singup' element={<Singup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
+        
 
         
     

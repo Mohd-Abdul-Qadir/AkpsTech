@@ -91,7 +91,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="phone"
-                  label="phone"
+                  label="Phone"
                   name="phone"
                   autoComplete="phone"
                 />
@@ -112,7 +112,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   name="password"
-                  label="conform password"
+                  label="confirm password"
                   type="password"
                   id="password"
                   autoComplete="new-password"
