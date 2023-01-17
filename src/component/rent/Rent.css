@@ -1,0 +1,52 @@
+.navbar{
+    background-color: rgb(251, 251, 251);
+}
+.navbar-brand{
+    margin-left: 79px;
+    font-size: 40px;
+}
+.form-inline{
+    display: flex;
+    margin-right: 70px;
+}
+.btn {
+    background: #0767d4db;
+    width: auto;
+    height: 45px;
+}
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.card1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card3{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card4{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn{
+    background-color: aqua;
+   
+}
+.head{
+    margin-left: 105px;
+    padding-top: 20px;
+}

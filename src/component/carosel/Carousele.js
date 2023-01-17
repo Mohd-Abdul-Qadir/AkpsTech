@@ -4,6 +4,7 @@ import img1 from "../imeges/img1.jpg";
 import img2 from "../imeges/img2.jpg";
 import img3 from "../imeges/img3.jpg";
 import RecentlyBuy from "../Recentlybuy/RecentlyBuy";
+import RecentlyRent from "../RecentlyRent/RecentlyRent";
 import Footer from "../footer/Footer"
 function Carousele() {
   return (
@@ -51,6 +52,7 @@ function Carousele() {
         </Carousel.Item>
       </Carousel>
       <RecentlyBuy/>
+      <RecentlyRent/>
       <Footer/>
     </>
   );

@@ -4,20 +4,11 @@
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-style: none!important;
-
 }
 .btn{
     background-color: aqua;
 }
- .head{
+.head{
     margin-left: 105px;
     padding-top: 20px;
-}
-@media  (max-width: 600px){
-     .cd{
-        margin-left: 10px;
-        justify-content: space-evenly;
-    
-    }
 }

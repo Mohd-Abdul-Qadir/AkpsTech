@@ -3,8 +3,11 @@ import Singup from './component/singup/Singup'
 import Login from './component/login/Login'
 import Contact from './component/contactus/ContactUs';
 import Navbar from './component/navbar/Navbar'
-import RecentlyBuy from './component/Recentlybuy/RecentlyBuy'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Buy from './component/buy/Buy';
+import Rent from './component/rent/Rent';
+import Plot from './component/plot/Plot';
+import ProdectDetails from './component/ProdectDetails/ProdectDetails';
 function App() {
   return(
     <>
@@ -15,6 +18,11 @@ function App() {
         <Route path='/singup' element={<Singup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/buy' element={<Buy/>}/>
+        <Route path='/rent' element={<Rent/>}/>
+        <Route path='/plot' element={<Plot/>}/>
+        <Route path='/prodectDetails' element={<ProdectDetails/>}/>
+
       </Routes>
     </BrowserRouter>
     
