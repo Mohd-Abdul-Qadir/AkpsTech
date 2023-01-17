@@ -14,12 +14,17 @@ import MenuItem from '@mui/material/MenuItem';
 import './Navbar.css';
 import Carousel from '../carosel/Carousele'
 // import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from "react-router-dom";
 
 
 
 function Navbar(){
+  const navigate = useNavigate();
+
+  const goto =()=>{
+    navigate('/Profile')
+  }
     const pages = ['Buy', 'Rent', 'plots','Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -153,11 +158,24 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+              <MenuItem onClick={goto}>
+                  <Typography textAlign="center" >Profile</Typography>
+                </MenuItem>
+                <MenuItem  >
+                  <Typography textAlign="center">Account</Typography>
+                </MenuItem><MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">profile</Typography>
+                </MenuItem><MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">profile</Typography>
+                </MenuItem><MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">profile</Typography>
+                </MenuItem>
+
             </Menu>
           </Box>
         </Toolbar>

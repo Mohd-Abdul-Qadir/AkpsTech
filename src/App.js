@@ -7,6 +7,7 @@ import Navbar from './component/navbar/Navbar'
 import RecentlyBuy from './component/Recentlybuy/RecentlyBuy'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Checkout from './component/addproduct/Checkout';
+import Profile from './component/profile/Profile';
 function App() {
   return(
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/Profile' element={<Profile/>}/>
         
 
         
