@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,18 +9,79 @@ import img5 from "../imeges/img5.jpg";
 import img6 from "../imeges/img6.jpg";
 import img7 from "../imeges/img7.jpg";
 import Footer from'./FooterBuy/Footer';
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import './Buy.css';
 import { ImportContacts } from '@mui/icons-material';
+
 const Buy = () => {
+  const [location, setLocation] = useState("");
+
+  const handleChange = (e) => {
+    setLocation(e.target.value);
+  };
+
   return (
     <>
-    <nav className="navbar " >
+    <nav className="navbar " style={{ height: 100 }}>
+        <a
+          className="navbar-brand"
+          style={{ fontWeight: "bold", color: "white" }}
+        >
+          Buy Your Dream House
+        </a>
+        <form
+          class="form-inline"
+          style={{
+            backgroundColor: "white",
+            padding: "7px",
+            borderRadius: "26px",
+            border: "1px solid black",
+          }}
+        >
+          <FormControl variant="standard" sx={{ m: 0.5, minWidth: 120 }}>
+            <Select
+              value={location}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+            >
+              <MenuItem value="">
+                <em>Location</em>
+              </MenuItem>
+              <MenuItem value={10}>Delhi</MenuItem>
+              <MenuItem value={20}>Mumbai</MenuItem>
+              <MenuItem value={30}>Noida</MenuItem>
+            </Select>
+          </FormControl>
+          <input
+            className="form-control mr-sm-2"
+            type="search"
+            placeholder="Search for locality"
+            aria-label="Search"
+            style={{ border: "none", marginBottom: "-10px" }}
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+            style={{
+              backgroundColor: "rgb(6, 41, 102)",
+              color: "white",
+              borderRadius: "26px",
+            }}
+          >
+            Search
+          </button>
+        </form>
+      </nav>
+    {/* <nav className="navbar " >
          <a className="navbar-brand" style={{fontWeight:'bold'}}>Buy Your Dream House</a>
     <form class="form-inline">
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit" style={{backgroundColor:"#1976d2",color:"white"}}>Search</button>
     </form>
-  </nav>
+  </nav> */}
 
 <div  className='card1'>
   <Card sx={{ maxWidth: 1000 }}>
@@ -58,7 +119,7 @@ const Buy = () => {
           </div>
       <div>
       <CardActions>
-      <Button variant="contained" style={{ left: "569px"}}>Contact</Button>
+      <Button variant="contained" style={{ left: "569px",backgroundColor: "rgb(6, 41, 102)"}}>Contact</Button>
       </CardActions>
       </div>
     </div>  
@@ -101,7 +162,7 @@ const Buy = () => {
           </div>
       <div>
       <CardActions>
-      <Button variant="contained" style={{ left: "569px"}}>Contact</Button>
+      <Button variant="contained" style={{ left: "569px",backgroundColor: "rgb(6, 41, 102)"}}>Contact</Button>
       </CardActions>
       </div>
     </div>  
@@ -144,7 +205,7 @@ const Buy = () => {
           </div>
       <div>
       <CardActions>
-      <Button variant="contained" style={{ left: "569px"}}>Contact</Button>
+      <Button variant="contained" style={{ left: "569px",backgroundColor: "rgb(6, 41, 102)"}}>Contact</Button>
       </CardActions>
       </div>
     </div>  
@@ -188,7 +249,7 @@ const Buy = () => {
           </div>
       <div>
       <CardActions>
-      <Button variant="contained" style={{ left: "569px"}}>Contact</Button>
+      <Button variant="contained" style={{ left: "569px",backgroundColor: "rgb(6, 41, 102)"}}>Contact</Button>
       </CardActions>
       </div>
     </div>  

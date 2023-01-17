@@ -1,5 +1,5 @@
 .navbar{
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(6, 41, 102);
 }
 .navbar-brand{
     margin-left: 79px;
@@ -48,4 +48,7 @@
 .head{
     margin-left: 105px;
     padding-top: 20px;
+}
+.drop{
+    height: 20px;
 }

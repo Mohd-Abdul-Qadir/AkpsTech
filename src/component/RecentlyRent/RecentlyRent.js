@@ -41,7 +41,7 @@ const RecentlyRent = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button variant="contained">Contact</Button>
+      <Button variant="contained" style={{backgroundColor:"#062966"}}>Contact</Button>
       </CardActions>
     </Card>
 
@@ -64,7 +64,7 @@ const RecentlyRent = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button variant="contained">Contact</Button>
+      <Button variant="contained" style={{backgroundColor:"#062966"}}>Contact</Button>
 
       </CardActions>
     </Card>
@@ -89,7 +89,7 @@ const RecentlyRent = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button variant="contained" className="btn">Contact</Button>
+      <Button variant="contained" style={{backgroundColor:"#062966"}}>Contact</Button>
       </CardActions>
     </Card>
 
@@ -112,7 +112,7 @@ const RecentlyRent = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button variant="contained">Contact</Button>
+      <Button variant="contained" style={{backgroundColor:"#062966"}}>Contact</Button>
       </CardActions>
     </Card>
 

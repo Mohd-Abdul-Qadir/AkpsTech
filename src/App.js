@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Buy from './component/buy/Buy';
 import Rent from './component/rent/Rent';
 import Plot from './component/plot/Plot';
+import ProdectDetails from './component/ProdectDetails/ProdectDetails';
 function App() {
   return(
     <>
@@ -20,9 +21,8 @@ function App() {
         <Route path='/buy' element={<Buy/>}/>
         <Route path='/rent' element={<Rent/>}/>
         <Route path='/plot' element={<Plot/>}/>
+        <Route path='/prodectDetails' element={<ProdectDetails/>}/>
 
-        
-    
       </Routes>
     </BrowserRouter>
     

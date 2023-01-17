@@ -1,4 +1,9 @@
 import React from 'react';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 export default function Footer() {
@@ -12,22 +17,25 @@ export default function Footer() {
         <div>
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="facebook-f" />
+            <FacebookIcon/>
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
+            <TwitterIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
+            <GoogleIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
+            {/* <MDBIcon fab icon="instagram" /> */}
+            <InstagramIcon/>
           </a>
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="linkedin" />
+            <LinkedInIcon/>
           </a>
-          <a href='' className='me-4 text-reset'>
+          {/* <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
-          </a>
+          </a> */}
         </div>
       </section>
 
